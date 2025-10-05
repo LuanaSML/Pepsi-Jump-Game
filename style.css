@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-body {
+  background-color: #5349e0;
+  font-family: 'Courier New', monospace;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+
+.game-board {
+  width: 100%;
+  height: 500px;
+  border-bottom: 5px solid #8c7fe3;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(rgb(185, 147, 255), rgb(94, 98, 215)), url("IMG/BACKGROUND.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.rock {
+  position: absolute;
+  bottom: -7px;
+  width: 200px;
+  animation: rock-animation 1.5s infinite linear;
+  z-index: 2;
+}
+
+.ground {
+  position: absolute;
+  bottom: 128px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-image: url("IMG/FUNDO GRAMA.png");
+  background-repeat: repeat-x;
+  background-size: auto 60%;
+  opacity: 0.5;
+  z-index: 1;
+  animation: ground-animation 8s infinite linear;
+}
+
+.sonic {
+  width: 450px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  z-index: 2;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+.clouds {
+  position: absolute;
+  width: 550px;
+  animation: clouds-animation 10s infinite linear;
+  opacity: 0.6;
+}
+
+@keyframes rock-animation {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 140px;
+  }
+
+  40% {
+    bottom: 200px;
+  }
+
+  50% {
+    bottom: 200px;
+  }
+  60% {
+    bottom: 200px;
+  }
+  100% {
+    bottom: 140px;
+  }
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -550px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes ground-animation {
+  from {
+    background-position-x: -80;
+  }
+  to {
+    background-position-x: -1000px; /* ajuste conforme a velocidade desejada */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.startpepsi {
+  position: absolute;
+  left: 30%;
+  bottom: 16%;
+  width: 600px;
+  height: auto;
+}
+
+.star-body {
+  background-color: #f3c6ff; 
+
+}
+
+.button-start {
+  position: absolute;
+  left: 43%;
+  bottom: 23%;
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #242424;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.button-start:hover{
+  background-color: #5349e0;
+  color: #f3c6ff; 
+  transform: scale(1.08) rotate(-2deg);
+  transition: 
+    background-color 0.2s,
+    color 0.2s,
+    transform 0.2s,
+    
+  
+}
+
+.button-menu{
+  left: 46%;
+  bottom: 15%;
+}
+
+.button-restart{
+  left: 42%;
+  bottom: 25%;
+}
+
+
+
+.button-menu, .button-restart {
+  position: absolute;
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #242424;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.button-menu:hover, 
+.button-restart:hover{
+  background-color: #5349e0;
+  color: #f3c6ff; 
+  transform: scale(1.08) rotate(-2deg);
+  transition: 
+    background-color 0.2s,
+    color 0.2s,
+    transform 0.2s,
+    
+  
+}
