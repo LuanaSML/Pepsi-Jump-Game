@@ -24,7 +24,7 @@ const loop = setInterval(() => {
 
         sonic.style.animation = 'none' ;
         sonic.style.bottom = `${sonicposition}px`;
-        sonic.src = './IMG/MORRENDO.gif';
+        sonic.src = './MORRENDO.gif';
         sonic.style.width = '200px';
     
         document.querySelector('.ground').style.animation = 'none';
